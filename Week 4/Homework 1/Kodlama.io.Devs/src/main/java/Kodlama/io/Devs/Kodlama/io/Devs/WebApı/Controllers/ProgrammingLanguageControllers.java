@@ -30,19 +30,19 @@ public class ProgrammingLanguageControllers {
         return this.programmingLanguageService.getById(id);
     }
 
-    @GetMapping("/add")
+    @PostMapping("/add")
     public String add(ProgrammingLanguage programmingLanguage) throws Exception {
        this.programmingLanguageService.add(programmingLanguage);
         return "Dil basariyla eklendi";
     }
 
-    @GetMapping("/delete")
+    @PostMapping("/delete")
     public String delete(int id) throws Exception {
         this.programmingLanguageService.delete(id);
         return "Dil basariyla silindi";
     }
 
-    @GetMapping("/update")
+    @PostMapping("/update")
     public String update(ProgrammingLanguage programmingLanguage, int id) throws Exception {
         this.programmingLanguageService.update(programmingLanguage,id);
         return "Dil basariyla guncellendi";
